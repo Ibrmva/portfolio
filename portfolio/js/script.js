@@ -6,3 +6,7 @@ hamburger.addEventListener("click", function(){
     this.classList.toggle("click")
     navlist.classList.toggle("open");
 });
+const container = document.querySelector('.container')
+container.addEventListener('animationend', () => {
+  container.classList.remove('active');
+});
