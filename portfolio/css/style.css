@@ -4,11 +4,119 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-
 }
+
 body{
     overflow-x: hidden;
 }
+.anim {
+    align-items: center;
+    background: #000;
+    border-radius: 40px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+  }
+  .text {
+    color: white;
+    position: absolute;
+    transition: opacity 300ms;
+    user-select: none;
+    -moz-user-select: none;
+  }
+  .fingerprint {
+    /* height: 80px; */
+    left: -8px;
+    opacity: 0;
+    position: absolute;
+    stroke: #777;
+    top: -9px;
+    transition: opacity 1ms;
+  }
+  .fingerprint-active {
+    stroke: #fff;
+  }
+  .fingerprint-out {
+    opacity: 1;
+  }
+  .odd {
+    stroke-dasharray: 0px 50px;
+    stroke-dashoffset: 1px;
+    transition: stroke-dasharray 1ms;
+  }
+  .even {
+    stroke-dasharray: 50px 50px;
+    stroke-dashoffset: -41px;
+    transition: stroke-dashoffset 1ms;
+  }
+  .ok {
+    opacity: 0;
+  }
+  .active.container {
+    animation: 6s Container;
+  }
+  .active .text {
+    opacity: 0;
+    animation: 6s Text forwards;
+  }
+  .active .fingerprint {
+    opacity: 1;
+    transition: opacity 300ms 200ms;
+  }
+  .active .fingerprint-base .odd {
+    stroke-dasharray: 50px 50px;
+    transition: stroke-dasharray 800ms 100ms;
+  }
+  .active .fingerprint-base .even {
+    stroke-dashoffset: 0px;
+    transition: stroke-dashoffset 800ms;
+  }
+  .active .fingerprint-active .odd {
+    stroke-dasharray: 50px 50px;
+    transition: stroke-dasharray 2000ms 1500ms;
+  }
+  .active .fingerprint-active .even {
+    stroke-dashoffset: 0px;
+    transition: stroke-dashoffset 2000ms 1300ms;
+  }
+  .active .fingerprint-out {
+    opacity: 0;
+    transition: opacity 300ms 4100ms;
+  }
+  .active .ok {
+    opacity: 1;
+    animation: 6s Ok forwards;
+  }
+  @keyframes Container {
+    0% { width: 200px }
+    6% { width: 80px }
+    71% { transform: scale(1); }
+    75% { transform: scale(1.2); }
+    77% { transform: scale(1); }
+  
+    94% { width: 80px }
+    100% { width: 200px }
+  }
+  @keyframes Text {
+    0% { opacity: 1; transform: scale(1); }
+    6% { opacity: 0; transform: scale(0.5); }
+  
+    94% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes Ok {
+    0% { opacity: 0 }
+    70% { opacity: 0; transform: scale(0); }
+    75% { opacity: 1; transform: scale(1.1); }
+    77% { opacity: 1; transform: scale(1); }
+    92% { opacity: 1; transform: scale(1); }
+    96% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 0 }
+  }
+
 .main-width{
     width: 1280px;
     max-width: 95%;
@@ -62,11 +170,12 @@ nav .hamb span{
     width: 100%;
     height: 3px;
     transition: .3s;
-    transition-property: transform,opacity;
+    transition-property:transform, opacity;
     
 }
 nav .hamb span:nth-child(2){
     margin: 7px 0px;
+    
 }
 nav .nav-list{
     list-style: none;
@@ -113,6 +222,7 @@ nav .nav-list li.btn:hover a{
     font-weight: 900;
     line-height: 1.2;
     margin: 20px 0px 20px;
+    
 }
 span{
     color: #2ecc71;
@@ -136,6 +246,7 @@ span{
     font-size: 15px;
     line-height: 1.5;
     margin-bottom: 30px;
+    
 }
 
 .social a{
@@ -151,11 +262,15 @@ span{
     margin-right: 20px;
     background-color: rgba(255, 255, 255, 0.1);
     margin-bottom: 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
 }
 .social a:hover{
     transform: scale(1.1);
-    background: #2ecc71;
+    background: #2eb2cc;
     transition: .4s;
+    
 }
 .container .hero-text button{
     color: #eee;
@@ -167,13 +282,28 @@ span{
     border: 2px solid #2ecc71;
     border-radius: 30px;
     cursor: pointer;
+    
+}
+a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+
+    background:linear-gradient(90deg, transparent, #2196f3);
+}
+a:hover span:nth-child(1)
+{
+    left: 100%;
+    transition: 1s;
 }
 .container .hero-text button:hover{
     background: transparent;
-    border: 2px solid #2ecc71;
+    border: 2px solid #2e78cc;
     color: #2ecc71;
-    transition: .4s;
+    
 }
+
 .bottom{
     margin-top: 243px;
     padding-bottom: 40px;
@@ -240,4 +370,5 @@ span{
     nav .nav-list.open{
         right: 0;
     }
+    
 }
