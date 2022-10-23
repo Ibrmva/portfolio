@@ -10,3 +10,9 @@ const container = document.querySelector('.container')
 container.addEventListener('animationend', () => {
   container.classList.remove('active');
 });
+var button = document.getElementById("clickme"),
+  count = 0;
+button.onclick = function() {
+  count += 1;
+  button.innerHTML = "Click me: " + count;
+};
