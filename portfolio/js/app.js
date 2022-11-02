@@ -38,10 +38,9 @@ const getInputValue = (event) => {
     fetchAllSuperHero(searchText);
 }
 
-// search form submission
 searchForm.addEventListener('submit', getInputValue);
 
-// api key => 727054372039115
+
 const fetchAllSuperHero = async(searchText) => {
     let url = `https://www.superheroapi.com/api.php/126086260244680/search/${searchText}`;
     
