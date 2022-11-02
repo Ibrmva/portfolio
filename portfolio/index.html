@@ -10,7 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"/>
 </head>
 <body>
     <section class="hero">
@@ -34,9 +39,10 @@
             </header>         
             <div class="container">
                 <div class="photo">
-                    <img src="../portfolio/img/g1.webp", width="200px", height="200px", alt=" ">
-                                   
+                    <img src="../portfolio/img/g1.webp", width="200px", height="200px", alt=" ", class="responsive">                                  
                  </div>
+                
+                
                 <div class="hero-text">
                 <article>   
                     <h3>Hi, There!</h3>
@@ -51,7 +57,7 @@
                         Hobbies: Swimming, running, drawing, reading, play chess.
                     </p>
                 </article>
-                    <h1>JUST RELAX</h1>
+                    <h1>JUST TO RELAX</h1>
                     <iframe width="950" height="534" class="responsiveYouTube" src="https://www.youtube.com/embed/jfKfPfyJRdk" 
                     title="lofi hip hop radio - beats to relax/study to" 
                     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -65,13 +71,9 @@
                         <button id="clickme">Click me: 0</button> 
                         <button type="button" id = "reset">reset</button>   
                     </div>
-                    <div class="photo1">
-                        <img src="img/1.webp", width="200px", height="250px", alt=" ", class="responsive">
-                        <img src="img/2.webp", width="200px", height="250px", alt=" ", class="responsive">
-                        <img src="img/3.webp", width="200px", height="250px", alt=" ", class="responsive">
-                        <img src="img/me.webp", width="270px", height="202.5px", alt=" ", class="responsive">
-
-                    </div>
+                    
+                      <!-- Script -->
+                      
                     
                         <div class="waviy">
                             <span style="--i:1">+</span>
@@ -102,7 +104,209 @@
                             </footer>
                         </article>
                         </div>
-                                                                        
+                        <div class = "main-wrapper">
+                            <div class = "app">
+                                <!-- app header -->
+                                <div class = "app-header">
+                                    <h2 class = "app-header-title">Super<span>Hero.</span></h2>
+                                    <form class = "app-header-search">
+                                        <input type = "text" class = "form-control" placeholder="Search your superhero here ..." name = "search">
+                                        <button type = "submit" class = "search-btn">
+                                            <i class = "fas fa-search"></i>
+                                        </button>
+                                        <div class = "search-list" id = "search-list">
+                                            <!-- <div class = "search-list-item">
+                                                <img src = "images/thumbnail-batman.jpg" alt = "">
+                                                <p>Batman</p>
+                                            </div> -->
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- end of app header -->
+                    
+                                <div class = "app-body">
+                                    <div class = "app-body-content">
+                                        <!-- app body thumbnail -->
+                                        <div class = "app-body-content-thumbnail">
+                                            <img src = "img/thumbnail-batman.jpg">
+                                        </div>
+                                        <!-- end of app body thumbnail -->
+                                        
+                                        <div class = "app-body-content-list">
+                                            <div class = "name">Batman</div>
+                    
+                                            <!-- tabs head -->
+                                            <div class = "app-body-tabs-head">
+                                                <button type = "button" class = "tab-head-single" data-id = "1">
+                                                    <span>powerstats</span>
+                                                </button>
+                                                <button type = "button" class = "tab-head-single" data-id = "2">
+                                                    <span>biography</span>
+                                                </button>
+                                                <button type = "button" class = "tab-head-single" data-id = "3">
+                                                    <span>appearance</span>
+                                                </button>
+                                                <button type = "button" class = "tab-head-single" data-id = "4">
+                                                    <span>connections</span>
+                                                </button>
+                                            </div>
+                                            <!-- end of tabs head -->
+                    
+                                            <!-- tabs body -->
+                                            <div class = "app-body-tabs-body">
+                                                <!-- powerstats tab -->
+                                                <ul class = "tab-body-single powerstats">
+                                                    <li>
+                                                        <div>
+                                                            <i class = "fa-solid fa-shield-halved"></i>
+                                                            <span>intelligence</span>
+                                                        </div>
+                                                        <span>100</span>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <i class = "fa-solid fa-shield-halved"></i>
+                                                            <span>strength</span>
+                                                        </div>
+                                                        <span>26</span>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <i class = "fa-solid fa-shield-halved"></i>
+                                                            <span>speed</span>
+                                                        </div>
+                                                        <span>27</span>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <i class = "fa-solid fa-shield-halved"></i>
+                                                            <span>durability</span>
+                                                        </div>
+                                                        <span>50</span>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <i class = "fa-solid fa-shield-halved"></i>
+                                                            <span>power</span>
+                                                        </div>
+                                                        <span>47</span>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <i class = "fa-solid fa-shield-halved"></i>
+                                                            <span>combat</span>
+                                                        </div>
+                                                        <span>100</span>
+                                                    </li>
+                                                </ul>
+                                                <!-- end of powerstats tab -->
+                    
+                                                <!-- biography tab -->
+                                                <ul class = "tab-body-single biography">
+                                                    <li>
+                                                        <span>full name</span>
+                                                        <span>terry mcginnis</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>alert-egos</span>
+                                                        <span>no alter egos found.</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>aliases</span>
+                                                        <span>Batman II, The Tomorrow Knight, Batman Beyond</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>place-of-birth</span>
+                                                        <span>Gothan City, 25th Century</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>first-apperance</span>
+                                                        <span>Batman Beyond #1</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>publisher</span>
+                                                        <span>DC Comics</span>
+                                                    </li>
+                                                </ul>
+                                                <!-- end of biography tab -->
+                    
+                                                <!-- appearance -->
+                                                <ul class = "tab-body-single appearance">
+                                                    <li>
+                                                        <span>
+                                                            <i class = "fas fa-star"></i> gender
+                                                        </span>
+                                                        <span>Male</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <i class = "fas fa-star"></i> race
+                                                        </span>
+                                                        <span>human</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <i class = "fas fa-star"></i> height
+                                                        </span>
+                                                        <span>5' 10''</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <i class = "fas fa-star"></i> weight
+                                                        </span>
+                                                        <span>170 lb</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <i class = "fas fa-star"></i> eye-color
+                                                        </span>
+                                                        <span>blue</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <i class = "fas fa-star"></i> hair-color
+                                                        </span>
+                                                        <span>black</span>
+                                                    </li>
+                                                </ul>
+                                                <!-- end of appearance -->
+                    
+                                                <!-- connections -->
+                                                <ul class = "tab-body-single connections">
+                                                    <li>
+                                                        <span>group--affiliation</span>
+                                                        <span>Batman Family, Justice League Unlimited</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>relatives</span>
+                                                        <span>Bruce Wayne (biological father), Warren McGinnis (father, deceased), Mary McGinnis (mother), Matt McGinnis (brother)</span>
+                                                    </li>
+                                                </ul>
+                                                <!-- end of connections -->
+                                            </div>
+                                            <!-- end of tabs body -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo1">
+                            <img src="img/1.webp", width="150px", height="200px", alt=" ", class="responsive">
+                            
+                        </div>
+                        <div class="photo2">
+                            <img src="img/2.webp", width="150px", height="200px", alt=" ", class="responsive">
+                        </div>
+                        <div class="photo3">
+                            <img src="img/3.webp", width="150px", height="200px", alt=" ", class="responsive">
+                        </div>
+                        <div class="photo4">
+                            <img src="img/me.webp", width="220px", height="152.2px", alt=" ", class="responsive">
+                        </div>
+                    
+                        <script type="text/javascript" src="js/app.js"></script>
+                        <script type="text/javascript" src="js/script.js"></script>
+                                                        
                             </body>            
                     
                     
@@ -110,7 +314,9 @@
                 
                 
     </section>
-    <script type="text/javascript" src="js/script.js"></script>
+    
+    
+    
     <!--<script>
         var typed = new Typed(".input", {
             srings:["Gulaiym Ibraimova.","Ala-Too International University, 2021 - current.","B.S. in Computer Science."],
