@@ -667,6 +667,9 @@ img{
         margin-right: 3rem;
     }
 }
+.show-tab{
+    display: block;
+}
 
 
 
